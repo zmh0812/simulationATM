@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>个人网上银行/管理员操作</title>
+  <meta name="description" content="Love Authority." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="iconfont.css"/>
+  <style>
+    body {
+      margin-top: 10px;
+    }
+
+    /* 头部样式 */
+    .header {
+      background-color: #4a7c59;
+      padding: 2px;
+      text-align: center;
+    }
+
+    /*公告栏*/
+    .announcement {
+      overflow: hidden;
+      
+      background-color: #4a7c59;
+    }
+
+    /* 导航栏 */
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #395e41;
+    }
+ 
+    li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    }
+ 
+    /* 鼠标移动到选项上修改背景颜色 */
+    li a:hover {
+    background-color: #555;
+    color: white;
+    }
+
+
+    .columntwo {
+      float: left;
+      background-color: #4a7c59;
+    }
+
+
+    /* 列后清除浮动 */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /*链接样式*/
+    .l{
+      text-decoration: none;
+      color: white;
+    }
+
+    th.a {
+    	height:30px;
+      width: 10px;
+    }
+    th.b {
+      height: 30px;
+      width: 50%;
+    }
+    th.c {
+      height: 30px;
+      margin-left: 0;
+      width:700px;
+    }
+  </style>
+</head>
+
+<body style="background-color: #4a7c59">
+
+  <!--头部-->
+  <div class="header">
+      <table>
+        <tr>
+          <th style="width: 20px"><img src="person.png"></img></th>
+          <th style="width: 200px">zmh</th>
+          <th style="width:850px;text-align: center;color: white"><h3>个人网上银行</h3></th>
+          </tr>
+      </table>
+  </div>
+
+</br>
+
+  <div class="row">
+  <!--导航栏-->
+    <ul>
+        </br>
+        <li><h6 style="text-align:center;color:white">主页</h6></li>
+
+        <li>
+          <form action="/admin/admin_menu" method="post">
+              <button type="submit" class="btn btn-block" style="background-color: #395e41;color:white " name="type" value="showallusers">管理用户</button>
+          </form>
+        </li>
+
+        <li>
+          <form action="/admin/admin_menu" method="post">
+              <button type="submit" class="btn btn-block" style="background-color: #395e41;color:white " name="type" value="modifypassword">修改密码</button>
+          </form>
+        </li>
+
+        <li>
+          <form action="/admin/admin_menu" method="post">
+              <button type="submit" class="btn btn-block" style="background-color: #395e41;color:white " name="type" value="modifynotice">修改公告</button>
+          </form>
+        </li>
+
+        <li>
+            <form action="/admin/admin_exit" method="post">
+              <button type="submit" class="btn btn-block" style="background-color: #395e41;color:white " name="type">退出</button>
+            </form>
+        </li>
+    </ul>
+  
+
+    <!--内容-->
+    <div class="culomntwo" style="margin-left: 200px">
+
+      <iframe name="test" style="background-color: white" width=700px  height=400px scrolling="auto" frameborder="0"></iframe>
+
+      <table style="margin-top: 2px">
+          <tr>
+          <th class="a"><i class="iconfont" style="color:white">&#xe62d;</i></th>
+              
+          <th class="c"><marquee><a href="selecteaffiche.html" target="_blank" class="l">有新公告！</a></marquee></th>
+          </tr>
+      </table>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

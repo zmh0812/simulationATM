@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <title>个人网上银行/网银公告修改</title>
+  <style>
+    #overflowTest {
+      background: rgb(199, 199, 199);
+      color: black;
+      padding: 15px;
+      width: 500px;
+      height: 200px;
+      overflow: scroll;
+      border: 1px solid #ccc;
+      float: inline-end;
+    }
+
+    #content_menu {
+      width: 500px;
+      height: 70px;
+      background-color: white;
+      /*定义浮动，不定义的话，界面会乱*/
+      float: inline-start;
+    }
+  </style>
+</head>
+<center>
+
+  <body>
+    <div>
+      <br />
+
+      <div id="content_menu">
+        <div class="form-group" style="color:cadetblue">
+          <input type="text" class="form-control" placeholder="网银公告" readonly="readonly"
+            style="text-align: center"></input>
+        </div>
+      </div>
+      <textarea id="overflowTest">
+    </textarea>
+      <br />
+      <br />
+      <button type="button" class="btn btn-primary float-right" style="margin-right: 150px;"
+        onclick="window.location.href='background.jpg'">提交</button>
+    </div>
+
+  </body>
+</center>
+
+</html>

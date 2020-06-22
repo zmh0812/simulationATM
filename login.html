@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <title>个人网上银行/用户登录</title>
+    <meta name="description" content="Love Authority." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="JS/validateLogin.js"></script>
+    <link rel="stylesheet" href="iconfont.css"/>
+</head>
+<style>
+    .bg {
+      background-color: #4a7c59;
+    }
+    /*链接样式*/
+    .l{
+      text-decoration: none;
+      color: white;
+    }
+
+    th.a {
+      height:30px;
+      width: 10px;
+    }
+    th.b {
+      height: 30px;
+      width: 100%;
+    }
+</style>
+
+<body class="bg">
+
+    <!--hero section-->
+    <br></br>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12">
+                    <div class="card border-none" style="background-color: #fbfbf2">
+                        <div class="card-block">
+                            <br></br>
+                            <h1 align="center" style="font-family: STKaiti">个人网上银行</h1>
+                            <br></br>
+                            <div class="mt-4">
+                                <form onsubmit="return checkForm()">
+                                    <div class="form-group">
+                                        <p>请选择登陆类型
+                                            <input type="radio" name="user" id="user_mode" value="user" style="margin-left:30px" checked="checked">用户
+											<input type="radio" name="user" id="admin_mode" value="admin" style="margin-left:60px">管理员
+										</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="user" class="form-control" id="user" value="" placeholder="请输入用户名" />
+                                        <span id="userTips"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="user_password" value="" placeholder="请输入密码"/>
+                                        <span id="passwordTips"></span>
+                                    </div>
+                                    <button type="button" class="btn btn-default float-right" onclick="checkForm()"
+                                    >登录</button>
+                                </form>
+                                
+                            <br></br>
+                            <p  id="user_view" class="text-center">
+                                <br></br>
+                                还没有账号？ <a href="user_register.html">注册</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <table>
+            <tr>
+            <th class="a"><i class="iconfont" style="color:white">&#xe62d;</i></th>
+                
+            <th class="b"><marquee><a href="selecteaffiche.html" target="_blank" class="l">有新公告！</a></marquee></th>
+            </tr>
+            </table>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+  <meta charset="utf-8" />
+  <title>个人网上银行/用户信息修改</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <script src="JS/validateChangeInformation.js"></script>
+</head>
+
+<body>
+  <div class="md-overlay"></div>
+  <script src="js/classie.js"></script>
+  <script src="js/modalEffects.js"></script>
+  <!--hero section-->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12">
+          <div class="card border-none">
+            <div class="card-block">
+              <div class="mt-2 text-center">
+                <h2>修改信息</h2>
+              </div>
+              <div class="mt-4">
+                <form onsubmit="return checkForm()">
+                  <div class="form-group">
+                    <input type="text" class="form-control" value="" placeholder="用户名称" id="userName"
+                      onblur="validateUserName()" />
+                    <span id="userNameTips"></span>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="idcard" value="" readonly="readonly" placeholder="身份证号"
+                      pattern="\d{12}" oninvalid="setCustomValidity(必须填写11位的身份证号);" />
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" name="confirm-password" value="" readonly="readonly"
+                      placeholder="性别" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="tele" value="" placeholder="手机号码"
+                      onblur="validatePhoneNum()" />
+                    <span id="phoneNumTips"></span>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="address" value="" placeholder="联系地址"
+                      onblur="validateAddress()" />
+                    <span id="addressTips"></span>
+                  </div>
+                  <button type="button" class="btn btn-primary float-right" style="margin-right:30px;"
+                    onclick="window.location.href='background.jpg'">提交</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

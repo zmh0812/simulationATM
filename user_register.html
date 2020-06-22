@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <title>个人网上银行/用户注册</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <script src="JS/validateRegister.js"></script>
+</head>
+
+<style>
+    background-color:white
+</style>
+
+<body>
+    <!--hero section-->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12">
+                    <div class="card border-none">
+                        <div class="card-block">
+                            <div class="mt-2 text-center">
+                                <h2>创建账户</h2>
+                            </div>
+                            <div class="mt-4">
+                                <form name="myform1" onsubmit="return checkForm()">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="email" value="" placeholder="输入用户名称" id="userName" onblur="validateUserName()"/>
+                                            <span id="userNameTips"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" name="password" value="" id="pwd1" placeholder="输入密码" onkeyup="validatePassword()"/>
+                                            <span id="psdTips"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" name="confirm-password" id="pwd2" value="" placeholder="确认密码"  onkeyup="validatePassword()" onclick="validatePassword()"/>
+                                            <span id="cPsdTips"></span>
+                                        </div>
+										<div class="form-group">
+											<p>请选择性别：   
+                                            <input type="radio" name="gender" value="male" style="margin-left:30px" checked="checked">男
+											<input type="radio" name="gender" value="女" style="margin-left:60px">女
+											</p>
+                                        </div>
+										<div class="form-group" onblur="validateGendr()">
+                                            <form id="genderList">
+                                                <input type="text" class="form-control" id="tele" value="" placeholder="输入手机号码" onblur="validatePhoneNum()" />
+                                                <span id="phoneNumTips"></span>
+                                            </form>    
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="" class="form-control" id="idcard" value="" placeholder="输入身份证号" onblur="validateIdCard()" >
+                                            <span id="idCardTips"></span>
+                                        </div>
+										<div class="form-group">
+                                            <input type="text" class="form-control" id="address" value="" placeholder="输入联系地址(省/市/区(县))" onblur="validateAddress()" >
+                                            <span id="addressTips"></span>
+                                        </div>
+									
+                                        <button type="button" class="btn btn-primary float-right"
+                                        onclick="checkForm()">注册</button>	
+										
+									</form>
+									<br/><br/>
+								    <p class="text-center">已有账户? <a href="login.html">登录</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+</html>
